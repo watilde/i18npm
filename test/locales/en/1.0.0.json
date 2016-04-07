@@ -1,4 +1,5 @@
 {
   "test": "test",
-  "hello": "hello"
+  "hello": "hello",
+  "it is %s": "it is %s"
 }

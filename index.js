@@ -1,5 +1,6 @@
 var fs = require('fs')
 var path = require('path')
+var util = require('util')
 
 function I18NPM (opts) {
   opts = opts || {}
@@ -15,12 +16,14 @@ function I18NPM (opts) {
 I18NPM.prototype.__ = function () {
   var args = Array.prototype.slice.call(arguments)
   var str = args.shift()
+  var out = ''
   if (!this._cache[this._file]) {
     this._readLocaleFile(this._file)
   }
 
   if (this._cache[this._file][str]) {
-    return this._cache[this._file][str]
+    out = this._cache[this._file][str]
+    return util.format.apply(util, [out].concat(args))
   }
 
   if (!this._cache[this._fallbackFile]) {
@@ -28,7 +31,8 @@ I18NPM.prototype.__ = function () {
   }
 
   if (this._cache[this._fallbackFile][str]) {
-    return this._cache[this._fallbackFile][str]
+    out = this._cache[this._fallbackFile][str]
+    return util.format.apply(util, [out].concat(args))
   }
 
   throw new Error('text not found: ' + str)

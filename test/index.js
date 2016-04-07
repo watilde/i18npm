@@ -16,3 +16,8 @@ test('do fallback', function (t) {
   t.equal(__('hello'), 'hello')
   t.end()
 })
+
+test('%s is replaced with arg', function (t) {
+  t.equal(__('it is %s', 'me'), 'it is me')
+  t.end()
+})
