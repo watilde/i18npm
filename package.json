@@ -4,7 +4,8 @@
   "description": "npm friendly translation module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "standard index.js test/index.js",
+    "test": "tap test/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/watilde/i18npm/issues"
   },
-  "homepage": "https://github.com/watilde/i18npm#readme"
+  "homepage": "https://github.com/watilde/i18npm#readme",
+  "devDependencies": {
+    "standard": "^6.0.8",
+    "tap": "^5.7.0"
+  }
 }
