@@ -1,0 +1,23 @@
+{
+  "name": "i18npm",
+  "version": "0.0.1",
+  "description": "npm friendly translation module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/watilde/i18npm.git"
+  },
+  "keywords": [
+    "i18n",
+    "npm"
+  ],
+  "author": "Daijiro Wachi <daijiro.wachi@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/watilde/i18npm/issues"
+  },
+  "homepage": "https://github.com/watilde/i18npm#readme"
+}
