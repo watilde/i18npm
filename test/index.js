@@ -21,3 +21,8 @@ test('%s is replaced with arg', function (t) {
   t.equal(__('it is %s', 'me'), 'it is me')
   t.end()
 })
+
+test('text not found', function (t) {
+  t.equal(__('text not found'), 'text not found')
+  t.end()
+})
