@@ -1,6 +1,6 @@
 {
   "name": "i18npm",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "npm friendly translation module",
   "main": "index.js",
   "scripts": {
