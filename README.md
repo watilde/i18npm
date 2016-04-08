@@ -36,12 +36,12 @@ Use case in npm
 ### lib/utils/i18n.js
 ```js
 var npm = require('../npm.js')
-var defaults = require('../config/defaults')
+var configDefs = require('../config/defaults')
 
 module.exports = require('i18npm')({
   version: npm.version,
-  path: config.get('locale-file-directory'),
-  fallbackPath: defaults['locale-file-directory']
+  path: npm.config.get('locale-file-directory'),
+  fallbackPath: configDefs.defaults['locale-file-directory']
 })
 ```
 
@@ -73,7 +73,7 @@ config:
 + `fallbackPath` {String} When there is no source file or no translated text, this base will be used
 
 ### i18npm.__(str, args, args...)
-Return a localized string, %s will be replaced with args.
+Return a localized string, `%s` will be replaced with args.
 
 ## License
 MIT
