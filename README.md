@@ -1,5 +1,5 @@
 # i18npm [![Build Status](https://travis-ci.org/watilde/i18npm.svg?branch=master)](https://travis-ci.org/watilde/i18npm)
-To keep weekly release, translated locale files should be placed out of npm(and its repository as well), and also they should be easy to be referred by `npm.config`. It means it is a possibility translated files come after the release like the following:
+To keep weekly release, translated locale files should be placed out of npm (and its repository as well), and also they should be easy to be referred to by `npm.config`. It means it is a possibility translated files come after the release like the following:
 
 ```
 inside global module, like npm-lang-ja
@@ -39,7 +39,7 @@ var npm = require('../npm.js')
 var defaults = require('../config/defaults')
 
 module.exports = require('i18npm')({
-  verison: npm.version,
+  version: npm.version,
   path: config.get('locale-file-directory'),
   fallbackPath: defaults['locale-file-directory']
 })
@@ -68,7 +68,7 @@ Inspired by [y18n](https://www.npmjs.com/package/y18n).
 
 ### i18npm(config)
 config:
-+ `version` {String} Handle a exactly file name including version number
++ `version` {String} Handle the exactly file name including the version number
 + `path` {String} Base directory
 + `fallbackPath` {String} When there is no source file or no translated text, this base will be used
 
