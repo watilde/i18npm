@@ -35,7 +35,7 @@ I18NPM.prototype.__ = function () {
     return util.format.apply(util, [out].concat(args))
   }
 
-  throw new Error('text not found: ' + str)
+  return str
 }
 
 I18NPM.prototype._readLocaleFile = function (file) {
